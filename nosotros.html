@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="shortcut icon" href="./assets/img/dent.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <title>CLINICA ODONTOLOGICA</title>
+</head>
+
+<body class="text-gray-800 antialiased">
+    <nav class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 ">
+        <div class="container px-4 mx-auto flex flex-wrap items-center justify-between">
+            <div class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
+                <a class="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
+                    href="index.html">
+                    <img src="./assets/img/dent.png" alt="Logo Odonto" style="width: 140px;">
+                </a><button
+                    class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+                    type="button" onclick="toggleNavbar('example-collapse-navbar')">
+                    <i class="text-white fas fa-bars"></i>
+                </button>
+            </div>
+            <div class="lg:flex flex-grow items-center bg-white lg:bg-transparent lg:shadow-none hidden"
+                id="example-collapse-navbar">
+                <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
+                    <li class="flex items-center">
+                        <a href="nosotros.html" class="item w-full">
+                            <button
+                                class="w-full text-gray-800 lg:text-white active:bg-gray-100 text-s font-semibold uppercase px-4 py-2 rounded hover:text-gray-600 lg:hover:text-gray-300 outline-none focus:outline-none lg:mr-1 lg:mb-0 lg:ml-3 mb-3"
+                                type="button" style="transition: all 0.15s ease 0s;">
+                                Nosotros
+                            </button>
+                        </a>
+                    </li>
+                    <!-- <li class="flex items-center">
+                        <a href="#acerca" class="item w-full">
+                            <button
+                                class="w-full text-gray-800 lg:text-white active:bg-gray-100 text-s font-semibold uppercase px-4 py-2 rounded hover:text-gray-600 lg:hover:text-gray-300 outline-none focus:outline-none lg:mr-1 lg:mb-0 lg:ml-3 mb-3"
+                                type="button" style="transition: all 0.15s ease 0s;">
+                                Acerca
+                            </button>
+                        </a>
+                    </li> -->
+                    <li class="flex items-center">
+                        <a href="servicios.html" class="item w-full">
+                            <button
+                                class="w-full text-gray-800 lg:text-white active:bg-gray-100 text-s font-semibold uppercase px-4 py-2 rounded hover:text-gray-600 lg:hover:text-gray-300 outline-none focus:outline-none lg:mr-1 lg:mb-0 lg:ml-3 mb-3"
+                                type="button" style="transition: all 0.15s ease 0s;">
+                                Servicios
+                            </button>
+                        </a>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="ubicacion.html" class="item w-full">
+                            <button
+                                class="w-full text-gray-800 lg:text-white active:bg-gray-100 text-s font-semibold uppercase px-4 py-2 rounded hover:text-gray-600 lg:hover:text-gray-300 outline-none focus:outline-none lg:mr-1 lg:mb-0 lg:ml-3 mb-3"
+                                type="button" style="transition: all 0.15s ease 0s;">
+                                Ubicación
+                            </button>
+                        </a>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="contactanos.html" class="item w-full">
+                            <button
+                                class="w-full text-gray-800 lg:text-white active:bg-gray-100 text-s font-semibold uppercase px-4 py-2 rounded hover:text-gray-600 lg:hover:text-gray-300 outline-none focus:outline-none lg:mr-1 lg:mb-0 lg:ml-3 mb-3"
+                                type="button" style="transition: all 0.15s ease 0s;">
+                                contactanos
+                            </button>
+                        </a>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="https://wa.me/50498664470" target="_blank" class="w-full">
+                            <button
+                                class="w-full bg-white text-green-600 active:bg-gray-100 text-s font-semibold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 lg:ml-3 mb-3"
+                                type="button" style="transition: all 0.15s ease 0s;">
+                                <i class="fas fa-check-circle"></i> Whatsapp</button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="swiper mySwiper" style="min-height: 80vh;">
+            <div class="swiper-wrapper" style="min-height: 80vh;">
+                <div class="swiper-slide relative pt-16 pb-32 flex content-center items-center justify-center"
+                    style="min-height: 80vh;">
+                    <div class="absolute top-0 w-full h-full bg-center bg-cover"
+                        style='background-image: url("./assets/img/risas.jpg");'>
+                        <span id="blackOverlay" class="w-full h-full absolute opacity-75 bg-black"></span>
+                    </div>
+                    <div class="container relative mx-auto">
+                        <div class="items-center flex flex-wrap">
+                            <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
+                                <div class="">
+                                    <h2 class="text-white font-semibold text-3xl md:text-5xl mb-4">
+                                        LA SONRIZA MAS BRILLANTE DE HONDURAS
+                                    </h2>
+                                    <p class="mt-4 text-xl text-gray-300">
+                                        Atenciòn  - Confianza - calidad
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden"
+                        style="height: 70px;">
+                        <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg"
+                            preserveAspectRatio="none" version="1.1" viewBox="0 0 2560 100" x="0" y="0">
+                            <polygon class="text-gray-300 fill-current" points="2560 0 2560 100 0 100"></polygon>
+                        </svg>
+                    </div>
+                </div>
+                <div class="swiper-slide relative pt-16 pb-32 flex content-center items-center justify-center"
+                    style="min-height: 80vh;">
+                    <div class="absolute top-0 w-full h-full bg-center bg-cover"
+                        style='background-image: url("./assets/img/hombre.jpg");'>
+                        <span id="blackOverlay" class="w-full h-full absolute opacity-75 bg-black"></span>
+                    </div>
+                    <div class="container relative mx-auto">
+                        <div class="items-center flex flex-wrap">
+                            <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
+                                <div class="">
+                                    <h1 class="text-white font-semibold text-4xl md:text-6xl mb-4">
+                                        La Clinica Dental Mejor Equipada
+                                    </h1>
+                                    <p class="mt-4 text-xl text-gray-300">
+                                        ¡La mejor atenciòn!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden"
+                        style="height: 70px;">
+                        <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg"
+                            preserveAspectRatio="none" version="1.1" viewBox="0 0 2560 100" x="0" y="0">
+                            <polygon class="text-gray-300 fill-current" points="2560 0 2560 100 0 100"></polygon>
+                        </svg>
+                    </div>
+                </div>
+                <div class="swiper-slide relative pt-16 pb-32 flex content-center items-center justify-center"
+                    style="min-height: 80vh;">
+                    <div class="absolute top-0 w-full h-full bg-center bg-cover"
+                        style='background-image: url("./assets/img/deinet.jpg");'>
+                        <span id="blackOverlay" class="w-full h-full absolute opacity-75 bg-black"></span>
+                    </div>
+                    <div class="container relative mx-auto">
+                        <div class="items-center flex flex-wrap">
+                            <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
+                                <div class=""><br><br><br><br>
+                                    <h1 class="text-white font-semibold text-4xl md:text-6xl mb-4">
+                                        Disfruta de Nuestras Promociones
+                                    </h1>
+                                    <p class="mt-4 text-xl text-gray-300">
+                                        ¡Los mejores precios!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden"
+                        style="height: 70px;">
+                        <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg"
+                            preserveAspectRatio="none" version="1.1" viewBox="0 0 2560 100" x="0" y="0">
+                            <polygon class="text-gray-300 fill-current" points="2560 0 2560 100 0 100"></polygon>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+       
+        <div class="flex flex-wrap items-center mt-2" id="acerca">
+            <div class="w-full md:w-5/12 px-4 mr-auto ml-auto">
+                <div
+                    class="text-gray-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-gray-100">
+                    <i class="fas fa-tooth text-xl"></i>
+                    <!-- <i class="fas fa-university text-xl"></i> -->
+                </div>
+                <h3
+                    class="text-3xl text-center inline-flex items-center justify-center mb-2 font-semibold leading-normal">
+                    ¿Quienés somos? Te contamos...
+                </h3>
+                <p class="text-lg font-light leading-relaxed mt-4 mb-4 text-black-700">
+                    Somos una clinica que nos especializamos en el area de la ortodoncia
+                    Un equipo de profesionales cuidando su salud bucal.
+
+                    Mi clinica es un sitio de confianza y ofrecemos la más alta calidad en servicios integrales de odontología.
+
+                    Contamos con todas las especialidades en el ámbito dental, utilizando las últimas tecnologías.
+
+                    Nuestra filosofía a es la PREVENCIÓN.
+                </p>
+                
+            </div>
+            <div class="w-full md:w-4/12 px-4 mr-auto ml-auto">
+
+                <img alt="..." src="./assets/img/mujer.jpg" class="w-full align-top rounded-t-lg" />
+                <blockquote class="relative p-8 mb-4">
+                    <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 583 95"
+                        class="absolute left-0 w-full block" style="height: 95px; top: -94px;">
+                        <polygon points="-30,95 583,95 583,65" class="text-gray-400 fill-current"></polygon>
+                    </svg>
+
+                </blockquote>
+            </div>
+        </div>
+        <br><br>
+        
+     
+       
+    </main>
+    <footer class="relative bg-gray-100 pt-8 pb-6">
+        <div class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
+            style="height: 80px;">
+            <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+                version="1.1" viewBox="0 0 2560 100" x="0" y="0">
+                <polygon class="text-gray-300 fill-current" points="2560 0 2560 100 0 100"></polygon>
+            </svg>
+        </div>
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap">
+                <div class="w-full lg:w-6/12 px-4">
+                    <h4 class="text-3xl font-semibold">Con Mi clinica den siempre sonries.</h4>
+                    <div class="mt-6">
+                        <a href="https://www.facebook.com" target="_blank">
+                            <button
+                                class="bg-white text-blue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
+                                type="button">
+                                <i class="flex fab fa-facebook-square"></i></button>
+                        </a>
+                        <a href="https://twitter.com" target="_blank">
+                            <button
+                                class="bg-white text-blue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
+                                type="button">
+                                <i class="flex fab fa-twitter-square"></i></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-6 border-gray-400" />
+            <div class="flex flex-wrap items-center md:justify-between justify-center">
+                <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+                    <div class="text-sm text-gray-600 font-semibold py-1">
+                        MY dent © 2021 | All Rights Reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      autoplay: {
+        delay: 5000,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+  <script>
+    function toggleNavbar(collapseID) {
+      document.getElementById(collapseID).classList.toggle("hidden");
+      document.getElementById(collapseID).classList.toggle("block");
+    }
+    const collapse = document.getElementById('example-collapse-navbar');
+    const links = document.querySelectorAll('.item');
+    links.forEach((e) => {
+      e.addEventListener('click', () => {
+        collapse.classList.toggle('hidden');
+        collapse.classList.toggle('block');
+      })
+    })
+
+    /* Modal */
+    var openmodal = document.querySelector('.modal-open')
+      openmodal.addEventListener('click', function(event){
+    	event.preventDefault()
+    	toggleModal()
+      })
+    
+    var openmodal2 = document.querySelector('.modal-open2')
+      openmodal2.addEventListener('click', function(event){
+    	event.preventDefault()
+    	toggleModal2()
+      })
+
+      var openmodal3 = document.querySelector('.modal-open3')
+      openmodal3.addEventListener('click', function(event){
+    	event.preventDefault()
+    	toggleModal3()
+      })
+
+      var openmodal4 = document.querySelector('.modal-open4')
+      openmodal4.addEventListener('click', function(event){
+    	event.preventDefault()
+    	toggleModal4()
+      })
+
+      var openmodal5 = document.querySelector('.modal-open5')
+      openmodal5.addEventListener('click', function(event){
+    	event.preventDefault()
+    	toggleModal5()
+      })
+   /*  
+    const overlay = document.querySelector('.modal-overlay')
+    overlay.addEventListener('click', toggleModal) */
+    
+    var closemodal = document.querySelectorAll('.modal-close')
+    for (var i = 0; i < closemodal.length; i++) {
+      closemodal[i].addEventListener('click', toggleModal)
+    }
+    var closemodal2 = document.querySelectorAll('.modal-close2')
+    for (var i = 0; i < closemodal2.length; i++) {
+      closemodal2[i].addEventListener('click', toggleModal2)
+    }
+    var closemodal3 = document.querySelectorAll('.modal-close3')
+    for (var i = 0; i < closemodal3.length; i++) {
+      closemodal3[i].addEventListener('click', toggleModal3)
+    }
+    var closemodal4 = document.querySelectorAll('.modal-close4')
+    for (var i = 0; i < closemodal4.length; i++) {
+      closemodal4[i].addEventListener('click', toggleModal4)
+    }
+    var closemodal5 = document.querySelectorAll('.modal-close5')
+    for (var i = 0; i < closemodal5.length; i++) {
+      closemodal5[i].addEventListener('click', toggleModal5)
+    }
+    
+    document.onkeydown = function(evt) {
+      evt = evt || window.event
+      var isEscape = false
+      if ("key" in evt) {
+    	isEscape = (evt.key === "Escape" || evt.key === "Esc")
+      } else {
+    	isEscape = (evt.keyCode === 27)
+      }
+      if (isEscape && document.body.classList.contains('modal-active')) {
+    	toggleModal()
+      }
+    };
+    
+    
+    function toggleModal () {
+      const body = document.querySelector('body')
+      const modal = document.querySelector('.modal')
+      modal.classList.toggle('opacity-0')
+      modal.classList.toggle('pointer-events-none')
+      body.classList.toggle('modal-active')
+    }
+    function toggleModal2 () {
+      const body = document.querySelector('body')
+      const modal2 = document.querySelector('.modal2')
+      modal2.classList.toggle('opacity-0')
+      modal2.classList.toggle('pointer-events-none')
+      body.classList.toggle('modal-active')
+    }
+    function toggleModal3 () {
+      const body = document.querySelector('body')
+      const modal3 = document.querySelector('.modal3')
+      modal3.classList.toggle('opacity-0')
+      modal3.classList.toggle('pointer-events-none')
+      body.classList.toggle('modal-active')
+    }
+    function toggleModal4 () {
+      const body = document.querySelector('body')
+      const modal4 = document.querySelector('.modal4')
+      modal4.classList.toggle('opacity-0')
+      modal4.classList.toggle('pointer-events-none')
+      body.classList.toggle('modal-active')
+    }
+    function toggleModal5 () {
+      const body = document.querySelector('body')
+      const modal5 = document.querySelector('.modal5')
+      modal5.classList.toggle('opacity-0')
+      modal5.classList.toggle('pointer-events-none')
+      body.classList.toggle('modal-active')
+    }
+  
+
+    /* Formulario */
+
+    document.addEventListener('submit', (e) =>{
+      e.preventDefault();
+      fetch('https://formsubmit.co/ajax/aasasasasa80@gmail.com',{
+        method:'POST',
+        body: new FormData(e.target)
+      }).then(res => res.ok ? res.json() : Promise.reject(res))
+      .then(data => {
+        console.log(data);
+        Toastify({
+          text: "El correo electrónico ha sido enviado correctamente",
+          duration: 3000,
+          close: true,
+          gravity: "top", // `top` or `bottom`
+          position: "left", // `left`, `center` or `right`
+          stopOnFocus: true, // Prevents dismissing of toast on hover
+          style: {
+            background: "#51A351",
+          },
+          onClick: function(){} // Callback after click
+        }).showToast();
+      })
+      .catch(err => {
+        Toastify({
+          text: "Error al enviar el correo electrónico",
+          duration: 3000,
+          close: true,
+          gravity: "top", // `top` or `bottom`
+          position: "left", // `left`, `center` or `right`
+          stopOnFocus: true, // Prevents dismissing of toast on hover
+          style: {
+            background: "crimson",
+          },
+          onClick: function(){} // Callback after click
+        }).showToast();
+        console.log(err);
+      })
+    })
+  </script>
+</html>
